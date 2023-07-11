@@ -1,0 +1,44 @@
+Include irvine32.inc
+.data
+var1 BYTE "nashit",0
+var2 BYTE ?
+msg BYTE "Reversed String: ",0
+.code
+main PROC
+mov ecx,LENGTHOF var1
+mov eax,offset var1
+push eax
+mov edx,offset msg
+call writestring
+call crlf
+call reverse_string
+main ENDP
+exit
+
+reverse_string proc
+push ebp
+mov ebp,esp
+mov esi,[ebp+8]
+sub ecx,2
+push ecx
+L1:
+inc esi
+loop L1
+pop ecx
+inc ecx
+mov edi,offset var2
+L2:
+mov al,[esi]
+mov [edi],al
+sub esi,1
+add edi,1
+LOOP L2
+mov [edi] ,al
+mov edx,offset var2
+pop ebp
+ret 4
+reverse_string ENDP
+exit
+
+
+END main

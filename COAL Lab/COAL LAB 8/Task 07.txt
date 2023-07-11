@@ -1,0 +1,63 @@
+INCLUDE IRVINE32.INC
+.data
+var byte 0
+Monday byte "Monday",0
+Tuesday byte "Tuesday",0
+Wednesday byte "Wednesday",0
+Thursday byte "Thursday",0
+Friday byte "Friday",0
+Saturday byte "Saturday",0
+Sunday byte "Sunday",0
+
+Imvalid byte "Invalid Input",0
+.code
+
+main proc
+
+mov eax,0
+call readdec
+mov var,al
+
+cmp var,1
+jnz Point2
+mov edx,offset Monday
+jmp Point9
+Point2:
+cmp var,2
+jnz Point3
+mov edx,offset Tuesday
+jmp Point9
+Point3:
+cmp var ,3
+jnz l4
+mov edx,offset Wednesday
+jmp Point9
+l4:
+cmp var, 4
+jnz Point5
+mov edx,offset Thursday
+jmp Point9
+Point5:
+cmp var,5
+jnz Point6
+mov edx,offset Friday
+jmp Point9
+Point6:
+cmp var,6
+jnz Point7
+mov edx,offset Saturday
+jmp Point9
+Point7:
+cmp var ,7
+jnz Point8
+mov edx,offset Sunday
+jmp Point9
+
+
+Point8:
+mov edx,offset Imvalid
+Point9:
+call writestring
+exit
+main endp
+end main

@@ -1,0 +1,31 @@
+Include irvine32.inc
+.data
+var1 SWORD 10
+var sword 51
+x sword 0
+.code
+main proc
+
+mov ebx,0
+mov eax,0
+
+movzx ecx, var1
+movzx edx,var
+add edx,1
+
+cmp var,cx
+jge Point2
+cmp ecx,edx
+jl Point2
+mov x,0
+jmp Point3
+
+Point2:
+mov x,1
+
+Point3:
+movzx eax,x
+call writedec
+exit
+main endp
+end main

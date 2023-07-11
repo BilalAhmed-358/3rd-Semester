@@ -1,0 +1,52 @@
+Include irvine32.inc
+.data
+var1 BYTE "Nashit",0
+var2 BYTE "Nashit",0
+msg1 BYTE "Strings are equal",0
+msg2 BYTE "Strings are not equal",0
+.code
+main PROC
+mov eax,offset var1
+mov ebx,offset var2
+push eax
+push ebx
+call Is_equal
+jnz noteq
+mov edx,offset msg1
+call writestring
+jmp quit
+noteq:
+mov edx,offset msg2
+call writestring
+quit:
+call crlf
+exit
+main ENDP
+
+
+Is_Equal PROC
+push ebp
+mov ebp,esp
+mov esi,[ebp+8]
+mov edi,[ebp+12]
+L1:
+mov al,[esi]
+mov dl,[edi]
+cmp al,0
+jne L2
+cmp dl,0
+jne L2
+jmp L3
+L2:
+add edi,1
+add esi,1
+cmp al,dl
+je L1
+L3:
+pop ebp
+ret 8
+Is_equal endp
+END Main
+
+exit
+END main

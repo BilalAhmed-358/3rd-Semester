@@ -1,0 +1,29 @@
+Include Irvine32.inc
+.code
+main PROC
+mov ecx,10
+Loop1:
+mov eax,4294967294 
+call RandomRange
+cmp eax,0
+JL L1
+call writeint
+mov eax,' '
+call writechar
+loop Loop1
+call crlf
+call crlf
+call crlf
+mov ecx,10
+Loop2:
+mov eax,60
+call RandomRange
+neg eax
+call writeint
+mov eax,' '
+call writechar
+loop Loop2
+call crlf
+exit
+main endp
+end main

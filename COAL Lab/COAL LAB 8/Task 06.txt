@@ -1,0 +1,49 @@
+INCLUDE IRVINE32.INC
+.data
+array dword 10, 4, 7, 14, 299, 156, 3, 19, 29, 300, 20
+var dword 0
+.code
+main proc
+mov eax,0
+mov ebx,0
+mov ecx, 0
+mov ecx,11
+mov edx,0
+mov esi,0
+Point1:
+mov edx,ecx
+mov ecx,10
+mov esi,0
+Point2:
+mov eax,array[esi]
+add esi,4
+mov ebx,array[esi]
+cmp eax,ebx
+jg Point3
+jne Point5 
+Point5:
+loop Point2
+mov ecx,edx
+loop Point1
+mov esi,0
+cmp ecx,0
+mov ecx,11
+je Point6
+Point3:
+mov var,eax
+mov eax,ebx
+mov ebx,var
+sub esi,4
+mov array[esi],eax
+mov array[esi+4],ebx
+jmp Point2
+Point6:
+mov eax,array[esi]
+call writedec
+mov eax," "
+call writechar
+add esi,4
+loop Point6
+exit
+main endp
+end main

@@ -1,0 +1,39 @@
+Include irvine32.inc
+.data
+
+Sent1 byte "The element you entered exists in the array",0
+Sent2 byte "The element you entered doesnot exist in the array",0
+array WORD 10, 4, 7, 14, 299, 156, 3, 19, 29, 300, 20
+var word 0
+.code
+main proc
+
+mov eax,0
+mov ebx,0
+mov ecx,0
+mov edx,0
+call readdec
+mov var,ax
+mov esi,0
+mov ecx,11
+movzx ebx,var
+l1:
+cmp bx,array[esi]
+jz l2
+inc esi
+inc esi
+loop l1
+
+mov edx,offset Sent2
+call writestring
+jmp l3
+
+l2:
+mov edx,offset Sent1
+call writestring
+
+l3:
+call Dumpregs
+exit
+main endp
+end main

@@ -1,0 +1,35 @@
+INCLUDE Irvine32.inc
+.data
+var1 DWORD 0
+var2 DWORD 0
+
+message BYTE "Enter a number ",0
+notequal BYTE "The numbers are not equal", 0
+equal BYTE "The numbers are equal", 0
+.code
+main proc
+mov edx, OFFSET message
+call writestring
+call readint
+mov var1, eax
+mov edx, OFFSET message
+call writestring
+call readint
+mov var2, eax
+mov eax, var1
+mov ebx, var2
+cmp eax, ebx
+jz E
+jnz N
+E:
+	mov edx, offset equal
+	call writestring
+	jmp close
+N:
+	mov edx, offset notequal
+	call writestring
+	jmp close
+close:
+exit
+main ENDP
+END main	

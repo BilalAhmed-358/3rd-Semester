@@ -1,0 +1,37 @@
+Include irvine32.inc
+.data
+Str1 BYTE "127&j~3#^&*#*#45^",0
+var BYTE ?
+prompt BYTE "Enter a character to search:",0
+msg BYTE "index of the first occurence: ",0
+.code
+main PROC
+mov ecx,3
+mov eax,0
+mov edx,offset var
+call readstring
+movzx eax,var
+push eax
+call scan_char
+main ENDP
+
+scan_char PROC
+push ebp
+mov ebp,esp
+mov al,BYTE PTR [ebp+8]
+mov ecx,LENGTHOF Str1
+mov edi,offset Str1
+cld
+repne scasb
+sub edi,1
+mov esi,offset Str1
+sub edi,esi
+mov eax,edi
+mov edx,offset msg
+call writeString
+call writedec
+call crlf
+scan_char ENDP
+
+exit
+END main

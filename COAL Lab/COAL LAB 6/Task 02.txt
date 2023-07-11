@@ -1,0 +1,22 @@
+Include Irvine32.inc
+.code
+main PROC
+mov eax, 0
+mov ebx, 0
+mov ecx, 100
+mov edx, 0
+L1:
+mov eax,100000
+call RandomRange
+mov dh,ah
+mov dl,al
+call gotoxy
+mov eax,'*'
+call writechar
+mov eax,100
+call delay
+call crlf
+loop L1
+exit
+main endp
+end main

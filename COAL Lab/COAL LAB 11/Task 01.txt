@@ -1,0 +1,22 @@
+Include irvine32.inc
+.data
+Str1 BYTE "127&j~3#^&*#*#45^",0
+msg BYTE "index of the first occurence: ",0
+.code
+main PROC
+mov al,'#'
+mov ecx,LENGTHOF Str1
+mov edi,offset Str1
+cld
+repne scasb
+sub edi,1
+mov esi,offset Str1
+sub edi,esi
+mov eax,edi
+mov edx,offset msg
+call writeString
+call writedec
+call crlf
+main ENDP
+exit
+END main

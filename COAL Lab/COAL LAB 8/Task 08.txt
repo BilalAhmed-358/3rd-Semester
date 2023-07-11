@@ -1,0 +1,46 @@
+INCLUDE IRVINE32.INC
+.data
+temp dword 0
+
+message1 byte "The character you entered is a alphabet",0
+message2 byte "The character you entered not a alphabet",0
+
+.code
+
+main proc
+
+mov eax,0
+call readchar
+call writechar
+call crlf
+cmp al,65
+jl Point5
+
+mov edx,offset message1
+jmp Point3
+
+
+Point2:
+cmp al,97
+jl Point5
+cmp al, 122
+jg Point4
+mov edx,offset message2
+jmp Point3
+
+
+
+Point4:
+mov edx,offset message1
+Point5: 
+mov edx,offset message2
+Point3:
+call crlf
+call writestring
+call crlf
+call dumpregs
+
+exit
+
+main endp
+end main

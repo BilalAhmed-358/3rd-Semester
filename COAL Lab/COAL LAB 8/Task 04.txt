@@ -1,0 +1,36 @@
+Include irvine32.inc
+.data
+
+word1 byte "hello",0
+word2 byte "world",0
+
+var sword 0
+.code
+main proc
+mov eax, 0
+mov ebx, 0
+mov ecx, 0
+mov edx, 0
+Point1:
+cmp var,10
+jg Point3
+cmp var , 5
+jge Point2
+mov edx,offset word1
+call writestring
+jmp Point4
+
+Point2:
+mov edx,offset word2
+call writestring 
+Point4:
+call crlf
+add var,1
+jmp Point1
+
+
+Point3:
+
+exit
+main endp
+end main

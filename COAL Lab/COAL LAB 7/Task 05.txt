@@ -1,0 +1,30 @@
+INCLUDE Irvine32.inc 
+.data
+star dword 'A'
+var1 BYTE 1
+var2 BYTE 5
+var3 BYTE 1
+.code
+main PROC
+mov ecx,5
+L1: 
+mov dl,var2
+mov dh,var1
+call Gotoxy
+mov ebx,ecx
+movzx ecx,var3
+L2:
+mov edx,OFFSET star
+call WriteString
+inc star
+LOOP L2
+mov ecx,ebx
+inc var3
+inc var1
+dec var2
+call crlf
+Loop L1
+
+EXIT
+MAIN ENDP
+END main
