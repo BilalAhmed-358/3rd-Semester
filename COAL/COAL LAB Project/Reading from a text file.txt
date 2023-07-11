@@ -1,0 +1,41 @@
+INCLUDE Irvine32.inc
+INCLUDE macros.inc
+BUFFER_SIZE = 5000
+.data
+buffer BYTE BUFFER_SIZE DUP(?)
+filename BYTE 80 DUP(0)
+fileHandle HANDLE ?
+.code
+main PROC
+; Let user input a filename.
+mWrite "Enter an input filename: "
+mov edx,OFFSET filename
+mov ecx,SIZEOF filename
+call ReadString
+
+; Open the file for input.
+mov edx,OFFSET filename
+call OpenInputFile
+mov fileHandle,eax
+
+; Read the file into a buffer.
+mov edx,OFFSET buffer
+mov ecx,BUFFER_SIZE
+;mov eax,0
+call ReadFromFile
+mov buffer[eax],0 ; insert null terminator
+mWrite "File size: "
+call WriteDec ; display file size
+call Crlf
+
+; Display the buffer.
+mWrite <"Buffer: ">
+mov edx,OFFSET buffer ; display the buffer
+call WriteString
+call Crlf
+mov eax,fileHandle
+call CloseFile
+
+exit
+main ENDP
+END main

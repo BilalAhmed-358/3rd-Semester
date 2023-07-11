@@ -1,0 +1,5 @@
+COAL 9
+Machine Language
+Machine Instruction Code
+Pipeline
+RISC Instruction Execution

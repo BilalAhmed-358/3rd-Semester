@@ -1,0 +1,294 @@
+Q1:(a)
+
+include irvine32.inc
+.data
+var dword 15 
+x dword ?
+msgt byte "Yes your condition is true: ",0
+msgf byte "No condition is false: ",0
+.code
+main proc
+mov eax,0
+mov ebx,0
+mov esi,0
+mov edi,0
+mov ecx,6
+mov edx,4
+cmp var,ecx
+jb next
+mov eax,1
+mov x,eax
+mov edx,offset msgf
+call writestring
+call writedec
+call crlf
+exit
+next:
+cmp ecx,edx
+jae thn
+mov eax,1
+mov x,eax
+mov edx,offset msgf
+call writestring
+call writedec
+call crlf
+exit 
+thn:
+mov eax,0
+mov x,eax
+mov edx,offset msgt
+call writestring
+call writedec
+call crlf
+exit
+main endp
+end main
+
+Q1 (b):
+
+include irvine32.inc
+.data
+var dword 0 
+x dword 2
+str1 byte "Hello",0
+str2 byte "World",0
+.code
+main proc
+mov eax,0
+mov ebx,0
+mov esi,0
+mov edi,0
+mov ecx,10
+mov edx,0
+mov ebx,2
+top:
+mov edx,0
+mov eax,var
+div ebx
+cmp var,ecx                               
+ja next
+cmp edx,0                                    
+mov edx,offset str1
+call writestring
+call crlf 
+inc var
+jmp top                                    
+next1:
+mov edx,offset str2
+call writestring
+call crlf
+inc var 
+jmp top
+next:
+call crlf
+exit 
+main endp
+end main
+
+Q3:
+
+include irvine32.inc
+.data
+intArr	SWORD	0, 0, 0, 0, 1, 20, 35, -12, 66, 4, 0
+c1 dword 0
+c2 dword 0
+str1 byte "Total non zero elements are: ",0
+str2 byte "Total zero elements are    : ",0
+.code
+main proc
+mov eax,0
+mov ebx,0
+mov ecx,0
+mov edx,0
+mov ecx,lengthof intArr
+mov esi,0
+l1:
+mov ax,intArr[esi]
+cmp ax,0
+je next
+inc c1
+top:
+add esi,2
+loop l1
+mov edx,offset str1
+call writestring
+mov eax,c1
+call writedec
+call crlf
+mov edx,offset str2
+call writestring
+mov eax,c2
+call writedec
+call crlf
+call crlf
+exit
+next:
+inc c2
+jmp top
+main endp
+end main		                
+
+Q4:
+
+include irvine32.inc
+.data
+intArr	byte 4 dup(?)
+c1 dword 0
+c2 dword 0
+first byte   "Enter the first element  : ",0
+second byte  "Enter the second element : ",0
+third byte   "Enter the third element  : ",0
+fourth byte  "Enter the fourth element : ",0
+str1 byte "Yes all four elements are equal: ",0
+str2 byte "Not all four elements are equal: ",0
+v1 dword ?
+v2 dword ?
+v3 dword ?
+v4 dword ?
+.code
+main proc
+mov eax,0
+mov ebx,0
+mov ecx,0
+mov edx,0
+mov edx,offset first
+call writestring
+call readdec
+mov v1,eax
+mov edx,offset second
+call writestring
+call readdec
+mov ebx,eax
+mov edx,offset third
+call writestring
+call readdec
+mov v3,eax
+mov edx,offset fourth
+call writestring
+call readdec
+cmp v1,ebx
+je n1
+mov edx,offset str2
+call writestring
+call crlf
+exit
+n1:
+cmp v3,ebx
+je n2
+mov edx,offset str2
+call writestring
+call crlf
+exit
+n2:
+cmp v3,eax
+je print
+mov edx,offset str2
+call writestring
+call crlf
+exit
+print:
+mov edx,offset str1
+call writestring
+call crlf
+exit
+main endp
+end main		                
+
+
+Q5:
+
+include irvine32.inc
+.data
+array dword 10, 4, 7, 14, 299, 156, 3, 19, 29, 300, 20
+search byte   "Enter the element that you want to search : ",0
+str1 byte "Yes element found. ",0
+str2 byte "No element does not found. ",0
+.code
+main proc
+mov eax,0
+mov ebx,0
+mov ecx,0
+mov edx,0
+mov edx,offset search
+call writestring
+call readdec
+mov ebx,eax
+mov ecx,lengthof array
+mov esi,0
+l1:
+mov eax,array[esi]
+cmp eax,ebx
+je ex
+add esi,4
+loop l1
+mov edx,offset str2
+call writestring
+call crlf
+exit
+ex:
+mov edx,offset str1
+call writestring
+call crlf
+exit
+main endp
+end main		                
+
+Q6:
+
+include irvine32.inc
+.data
+counter dword 0
+v dword ?
+list dword 10 dup(?)
+print byte "Total swap counter value is: ",0
+insert byte "Enter the element: ",0
+total byte "How many elements you want to enter: ",0
+.code
+main proc
+mov eax,0
+mov ebx,0
+mov ecx,0
+mov edx,0
+mov esi,offset list
+mov edi,offset list
+add edi,4
+mov edx,offset total
+call writestring
+call readdec
+mov v,eax
+mov ecx,eax
+call crlf
+mov ebp,esi
+l1:
+mov edx, offset insert
+call writestring
+call readdec
+mov [ebp],eax
+add ebp,4
+loop l1
+mov ecx,v
+dec ecx
+l2:
+mov eax,[esi]
+mov ebx,[edi]
+cmp eax,ebx
+jbe ex
+mov [esi],ebx
+mov [edi],eax
+inc counter
+top:
+add esi,4
+add edi,4
+loop l2
+call crlf
+mov edx,offset print
+call writestring
+mov eax,counter
+call writedec 
+call crlf
+exit
+ex:
+jmp top
+main endp
+end main		                
+

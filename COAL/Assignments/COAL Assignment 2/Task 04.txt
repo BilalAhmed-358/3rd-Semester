@@ -1,0 +1,30 @@
+TITLE My First Program (Test.asm)
+INCLUDE Irvine32.inc
+.data
+in_message byte "Enter the number you want to calculate factorial of ", 0
+out_message byte "The value of the factorial of the given number is ", 0
+.code
+main PROC
+mov eax, 0
+mov ebx, 0
+mov ecx, 0
+mov edx, 0
+mov edx, offset in_message
+call writestring
+call crlf
+call readint
+mov ecx, eax
+mov ebx,eax
+l1:
+	dec ebx
+	cmp ebx,0
+	jz l2
+	mul ebx
+	loop l1
+l2:
+mov edx, offset out_message
+call writestring
+call writedec
+exit
+main ENDP
+END main
