@@ -1,0 +1,257 @@
+******************************************************************************************************
+Analysed Review: 
+top quality experience
+
+Positive Words:
+top
+
+Positive Sentiments: 1
+Negative Sentiments: 0
+Total Sentimental References: 1
+
+Polarity: 1
+
+
+Sentiment possessed is POSITIVE 
+
+******************************************************************************************************
+Analysed Review: 
+sad but great thrill
+
+Positive Words:
+great
+thrill
+
+Negative Words:
+sad
+
+Positive Sentiments: 2
+Negative Sentiments: 1
+Total Sentimental References: 3
+
+Polarity: 0.666667
+
+
+Sentiment possessed is POSITIVE 
+
+******************************************************************************************************
+Analysed Review: 
+sad and great
+
+Positive Words:
+great
+
+Negative Words:
+sad
+
+Positive Sentiments: 1
+Negative Sentiments: 1
+Total Sentimental References: 2
+
+Polarity: 0.5
+
+
+Sentiment possessed is NEUTRAL 
+
+******************************************************************************************************
+Analysed Review: 
+sad
+
+Negative Words:
+sad
+
+Positive Sentiments: 0
+Negative Sentiments: 1
+Total Sentimental References: 1
+
+Polarity: 0
+
+
+Sentiment possessed is NEGATIVE 
+
+******************************************************************************************************
+Analysed Review: 
+happy
+
+Positive Words:
+happy
+
+Positive Sentiments: 1
+Negative Sentiments: 0
+Total Sentimental References: 1
+
+Polarity: 1
+
+
+Sentiment possessed is POSITIVE 
+
+******************************************************************************************************
+Analysed Review: 
+amazing food and service
+
+Positive Words:
+amazing
+
+Positive Sentiments: 1
+Negative Sentiments: 0
+Total Sentimental References: 1
+
+Polarity: 1
+
+
+Sentiment possessed is POSITIVE 
+
+******************************************************************************************************
+Analysed Review: 
+i loved your  service
+
+Positive Words:
+loved
+
+Positive Sentiments: 1
+Negative Sentiments: 0
+Total Sentimental References: 1
+
+Polarity: 1
+
+
+Sentiment possessed is POSITIVE 
+
+******************************************************************************************************
+Analysed Review: 
+worst service ever provided
+
+Negative Words:
+worst
+
+Positive Sentiments: 0
+Negative Sentiments: 1
+Total Sentimental References: 1
+
+Polarity: 0
+
+
+Sentiment possessed is NEGATIVE 
+
+******************************************************************************************************
+Analysed Review: 
+my wife didnt liked the food at all 
+
+Negative Words:
+didn't liked
+
+Positive Sentiments: 0
+Negative Sentiments: 1
+Total Sentimental References: 1
+
+Polarity: 0
+
+
+Sentiment possessed is NEGATIVE 
+
+******************************************************************************************************
+Analysed Review: 
+kids were delighted receiving the christmas gift during the flight
+
+Positive Words:
+delighted
+
+Positive Sentiments: 1
+Negative Sentiments: 0
+Total Sentimental References: 1
+
+Polarity: 1
+
+
+Sentiment possessed is POSITIVE 
+
+******************************************************************************************************
+Analysed Review: 
+torn seat coversamazing food and service
+
+Positive Words:
+coversamazing
+
+Negative Words:
+torn
+
+Positive Sentiments: 1
+Negative Sentiments: 1
+Total Sentimental References: 2
+
+Polarity: 0.5
+
+
+Sentiment possessed is NEUTRAL 
+
+******************************************************************************************************
+Analysed Review: 
+torned seat and poor service :(
+
+Negative Words:
+torned
+poor
+:(
+
+Positive Sentiments: 0
+Negative Sentiments: 3
+Total Sentimental References: 3
+
+Polarity: 0
+
+
+Sentiment possessed is NEGATIVE 
+
+******************************************************************************************************
+Analysed Review: 
+i got sick and stomachache after eating the food provided which made my trip really worst to which i was looking for since alot of months. :( :_(
+
+Negative Words:
+sick
+worst
+:(
+
+Positive Sentiments: 0
+Negative Sentiments: 3
+Total Sentimental References: 3
+
+Polarity: 0
+
+
+Sentiment possessed is NEGATIVE 
+
+******************************************************************************************************
+Analysed Review: 
+it seems to be good product
+
+Positive Words:
+good
+
+Positive Sentiments: 1
+Negative Sentiments: 0
+Total Sentimental References: 1
+
+Polarity: 1
+
+
+Sentiment possessed is POSITIVE 
+
+******************************************************************************************************
+Analysed Review: 
+fuck it! this is the shittiest thing i've ever worked on!
+
+Positive Words:
+worked
+
+Negative Words:
+fuck
+
+Positive Sentiments: 1
+Negative Sentiments: 1
+Total Sentimental References: 2
+
+Polarity: 0.5
+
+
+Sentiment possessed is NEUTRAL 
+

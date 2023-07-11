@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "algorithm": "cpp",
+        "queue": "cpp",
+        "xstring": "cpp"
+    }
+}
