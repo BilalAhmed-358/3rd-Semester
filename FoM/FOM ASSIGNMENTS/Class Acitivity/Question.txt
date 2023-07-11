@@ -1,0 +1,59 @@
+Class Activity: 
+
+Improving  your problem solving Skills- 29/10/2021
+Situation:
+
+
+
+The Sure To Peal Paint
+Company stores all its metal compressed gas containers in a warehouse. These
+long cylindrical metal tanks contain various gases used in manufacturing cans
+of spray paint. The gas tanks are delivered to the warehouse by truck. Two
+receiving dock workers unload the containers from the delivery trucks and place
+them on four wheel trucks. Two materials handlers are responsible for pushing
+the loaded trucks into the warehouse, unloading the tanks and setting them up
+on end. The two materials handlers spend a major portion of their day moving
+loads of the gas tanks into the warehouse and placing them into the proper
+storage locations. In total, there are five different types of gases that in
+equal proportion make up 98% of all gas handled.
+
+
+Question:
+Management would like to identify a better way to handle these gas tanks. How
+can the handling operation be improved?
+
+
+ 
+
+
+Scenario
+
+
+Our client is one of the world's largest pharmaceutical
+companies. Based in the US, the client has a wide range of successful products
+on the markets that include various drugs for erectile dysfunction, lowering
+blood cholesterol, anxiety disorders, anti-inflammatory drugs, antidepressants,
+etc. Currently, the client has only one product on the market for cancer
+treatment generating roughly $500M in annual sales. In the next 6-12 months,
+the client is planning on introducing a new cancer drug on the market. This
+particular drug, RFC-9000, will also be for cancer patients, and its target
+audience is oncologists. In this space, there is one major competitor for the
+client's current cancer drug. RFC-9000 has already completed clinical trials
+and is currently awaiting approval from the FDA (the client is expecting FDA
+approval based upon the trial results). If this new drug is introduced this
+year, there will be no competition for at least one year. The current sales
+force includes 750 sales representatives who support the company's cancer drug
+that is already on the market. To successfully introduce the new drug to the
+oncology market, the client will need to invest in expanding its sales
+division.
+
+
+The
+client's intelligence has also suggested that a competitor might introduce a
+different drug that targets the same cancer within the next 3.5 years.
+
+Your challenge
+
+
+Your job, as an external consultant, is to
+help the client think through this problem:
